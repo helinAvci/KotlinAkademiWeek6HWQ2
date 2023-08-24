@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/mainPageFragment">
+
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.helinavci.kotlinakademiweek6hwq2.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_detayPageFragment"
+            app:destination="@id/detayPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detayPageFragment"
+        android:name="com.helinavci.kotlinakademiweek6hwq2.DetayPageFragment"
+        android:label="fragment_detay_page"
+        tools:layout="@layout/fragment_detay_page" >
+        <action
+            android:id="@+id/action_detayPageFragment_to_closingFragment"
+            app:destination="@id/closingFragment"
+            app:popUpTo="@id/mainPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/closingFragment"
+        android:name="com.helinavci.kotlinakademiweek6hwq2.ClosingFragment"
+        android:label="fragment_closing"
+        tools:layout="@layout/fragment_closing" />
+</navigation>
